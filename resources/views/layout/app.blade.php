@@ -14,6 +14,7 @@
     <title>@yield('titulo', 'Expo Digital 2025 - Benguela')</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://expo-digital-benguela-2025-production.up.railway.app/build/assets/app.css">
 </head>
 <body>
     <!-- Navegação -->
