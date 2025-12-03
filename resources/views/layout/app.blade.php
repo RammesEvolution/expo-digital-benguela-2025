@@ -47,7 +47,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ route('pagina-inicial') }}">
-                <img src="/images/logos/logo-governo.png" alt="Logo Governo" class="logo-navbar logo-governo me-2">
                 <img src="/images/logo-expo-blue.png" alt="Logo Expo Digital 2025" class="logo-navbar logo-expo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
