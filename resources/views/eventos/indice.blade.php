@@ -45,10 +45,10 @@
             @forelse($eventos as $evento)
                 
                 @php
-                    use Carbon\Carbon;
+                    
                     // Certifica-se de que o campo é um objeto Carbon para usar isPast()
                     // Se o seu modelo Evento usa $dates ou $casts, Carbon::parse pode ser redundante, mas é mais seguro.
-                    $data_fim = Carbon::parse($evento->data_fim); 
+                    $data_fim = \Carbon\Carbon::parse($evento->data_fim); 
                     $estado_visual = ucfirst($evento->estado);
                     $cor_badge = 'bg-secondary'; // Default para 'Planejado'
 

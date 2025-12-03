@@ -8,7 +8,7 @@
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1 class="titulo-pagina mb-0">Galeria de Eventos</h1>
             @auth
-                @if(Auth::user()->isAdmin())
+                @if(Auth::user()->isAdmin()) 
                     <a href="{{ route('galeria.criar') }}" class="btn-principal">
                         <i class="fas fa-plus"></i> Adicionar Imagem
                     </a>

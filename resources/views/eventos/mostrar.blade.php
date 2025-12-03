@@ -9,11 +9,15 @@
             <div class="col-md-8">
                 <h1 class="titulo-pagina">{{ $evento->titulo }}</h1>
             </div>
-            <div class="col-md-4 text-end">
-                <a href="{{ route('eventos.editar', $evento->id) }}" class="btn-principal">
-                    <i class="fas fa-edit"></i> Editar
-                </a>
-            </div>
+            @auth
+                @if(Auth::user()->isAdmin())
+                    <div class="col-md-4 text-end">
+                        <a href="{{ route('eventos.editar', $evento->id) }}" class="btn-principal">
+                            <i class="fas fa-edit"></i> Editar
+                        </a>
+                    </div>
+                @endif
+            @endauth
         </div>
 
         <div class="row g-4">
@@ -21,7 +25,17 @@
                 <div class="card-evento-completo">
                     <div class="evento-header mb-3">
                         <span class="badge-categoria">{{ $evento->categoria }}</span>
-                        <span class="badge-estado">{{ ucfirst($evento->estado) }}</span>
+                        
+                        <?php
+                            $estado = ucfirst($evento->estado);
+                            // Lógica: Se o evento estiver 'confirmado' E a data de fim JÁ PASSOU,
+                            // redefinimos o estado para 'Realizado'.
+                            if ($evento->estado === 'confirmado' && $evento->data_fim->lessThan($today)) {
+                                $estado = 'Realizado';
+                            }
+                        ?>
+
+                        <span class="badge-estado">{{ $estado }}</span> 
                     </div>
 
                     <h3 class="titulo-subsecao">Descrição</h3>
@@ -75,13 +89,17 @@
                         <a href="{{ route('eventos.indice') }}" class="btn-principal">
                             <i class="fas fa-arrow-left"></i> Voltar
                         </a>
-                        <form action="{{ route('eventos.eliminar', $evento->id) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja eliminar?')">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn-principal w-100" style="background-color: #dc3545; border-color: #dc3545;">
-                                <i class="fas fa-trash"></i> Eliminar Evento
-                            </button>
-                        </form>
+                        @auth
+                            @if(Auth::user()->isAdmin())
+                                <form action="{{ route('eventos.eliminar', $evento->id) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja eliminar?')">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn-principal w-100" style="background-color: #dc3545; border-color: #dc3545;">
+                                        <i class="fas fa-trash"></i> Eliminar Evento
+                                    </button>
+                                </form>
+                            @endif
+                         @endauth
                     </div>
                 </div>
             </div>

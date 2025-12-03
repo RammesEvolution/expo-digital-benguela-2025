@@ -18,7 +18,6 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <style>
-       <style>
         .logo-navbar {
             height: 40px; 
             transition: all 0.3s ease;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Evento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class EventoController extends Controller
 {
@@ -60,12 +61,14 @@ class EventoController extends Controller
         return redirect()->route('eventos.indice')->with('sucesso', 'Evento criado com sucesso!');
     }
 
-    public function mostrar($id)
+   public function mostrar($id)
     {
         $evento = Evento::with('galerias')->findOrFail($id);
-        return view('eventos.mostrar', compact('evento'));
-    }
+        $today = Carbon::now(); // <--- NOVO: Obtém a data/hora atual
 
+        // Passa o evento E a data atual para a view
+        return view('eventos.mostrar', compact('evento', 'today')); 
+    }
     public function editar($id)
     {
         $evento = Evento::findOrFail($id);
