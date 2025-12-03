@@ -13,7 +13,6 @@ class DatabaseSeeder extends Seeder
             EventoSeeder::class,
             GaleriaSeeder::class,
           //  NewsletterSeeder::class,
-            ParceirosSeeder::class,
         ]);
     }
 }

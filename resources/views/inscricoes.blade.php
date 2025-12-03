@@ -3,234 +3,69 @@
 @section('titulo', 'Inscrições e Normas - Expo Digital 2025')
 
 @section('conteudo')
-<!-- Hero Section with Background Image -->
 <section class="hero-section" style="background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('/images/banner-principal.jpg') center / cover; background-attachment: fixed;">
     <div class="hero-overlay">
         <div class="hero-content">
-            <div class="hero-logo-section">
-                <img src="/images/logo-expo-blue.png" alt="Expo Digital 2025" class="hero-logo">
-            </div>
             
             <h1 class="hero-titulo">Inscrições e Normas</h1>
-            <p class="hero-descricao">Informações Essenciais para Participar da Expo Digital 2025</p>
+            <p class="hero-descricao">Informações Essenciais para Expositores da Expo Digital 2025</p>
         </div>
     </div>
 </section>
 
-<!-- Processo de Inscrição -->
 <section class="secao-inscricao-processo py-5">
     <div class="container">
-        <h2 class="titulo-secao text-center mb-5">Processo de Inscrição</h2>
+        <h2 class="titulo-secao text-center mb-5">Quem se pode Inscrever</h2>
         
         <div class="row g-4">
             <div class="col-lg-8 mx-auto">
                 <div class="card-info-inscricao mb-4">
-                    <h4><i class="fas fa-check-circle"></i> Como se Inscrever?</h4>
-                    <p>As inscrições para a Expo Digital 2025 são realizadas <strong>exclusivamente no Portal do Governo Provincial de Benguela</strong>.</p>
-                    
-                    <ol class="lista-passos">
-                        <li>Aceda ao <a href="https://portal.benguela.gov.ao" target="_blank" class="link-destaque">Portal do Governo Provincial</a></li>
-                        <li>Localize a secção "Expo Digital 2025"</li>
-                        <li>Preencha o formulário de inscrição com seus dados</li>
-                        <li>Selecione o dia ou dias que deseja participar</li>
-                        <li>Confirme sua inscrição</li>
-                        <li>Receba confirmação por email</li>
-                    </ol>
+                    <h4><i class="fas fa-bullhorn me-3 text-primary"></i>Tipo de Participante</h4>
+                    <p>Convidamos <strong> empresas</strong> (pessoas coletivas) e <strong>indivíduos</strong> (pessoas singulares) interessados em apresentar um projeto inovador ou solução tecnológica que se alinhe com o tema da transformação digital e inclusão tecnológica.</p>
                 </div>
 
-                <div class="card-info-inscricao">
-                    <h4><i class="fas fa-calendar-alt"></i> Período de Inscrições</h4>
-                    <p><strong>Abertura:</strong> 01 de Novembro de 2025</p>
-                    <p><strong>Encerramento:</strong> 15 de Dezembro de 2025</p>
-                    <p><strong>Vagas:</strong> Limitadas (inscrição por ordem de chegada)</p>
+                <div class="card-info-inscricao mb-4">
+                    <h4><i class="fas fa-list-ol me-3 text-primary"></i>Como Se Inscrever</h4>
+                    <p>As inscrições são realizadas <strong>exclusivamente através do formulário oficial</strong> disponibilizado nesta plataforma, na secção seguinte. Após o envio, a sua candidatura será avaliada pela Organização, que entrará em contacto para confirmar a participação.</p>
                 </div>
-            </div>
-        </div>
-        
-        <div class="text-center mt-5">
-            <a href="https://portal.benguela.gov.ao" target="_blank" class="btn btn-primary btn-lg">Inscrever-se Agora</a>
-        </div>
-    </div>
-</section>
-
-<!-- Normas para Expositores -->
-<section class="secao-normas-expositores py-5 bg-light">
-    <div class="container">
-        <h2 class="titulo-secao text-center mb-5">Normas para Expositores</h2>
-        
-        <div class="row g-4">
-            <!-- Requisitos Obrigatórios -->
-            <div class="col-lg-6">
-                <div class="card-norma">
-                    <div class="norma-icone obrigatorio">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>Requisitos Obrigatórios</h4>
-                    <ul class="lista-normas">
-                        <li><i class="fas fa-check"></i> Apresentar soluções digitais ou serviços modernizados</li>
-                        <li><i class="fas fa-check"></i> Alinhar-se com o tema "Tecnologia ao Serviço do Cidadão"</li>
-                        <li><i class="fas fa-check"></i> Ter um técnico presente durante TODO o período da exposição</li>
-                        <li><i class="fas fa-check"></i> Cumprir regulamento de saúde e segurança</li>
-                        <li><i class="fas fa-check"></i> Respeitar horários e protocolos do evento</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Proibições -->
-            <div class="col-lg-6">
-                <div class="card-norma">
-                    <div class="norma-icone proibido">
-                        <i class="fas fa-ban"></i>
-                    </div>
-                    <h4>Proibições Estritas</h4>
-                    <ul class="lista-normas">
-                        <li><i class="fas fa-times"></i> É proibido apresentar conteúdos não relacionados à inovação</li>
-                        <li><i class="fas fa-times"></i> Não são permitidas atividades comerciais não autorizadas</li>
-                        <li><i class="fas fa-times"></i> Proibido conteúdo político ou religioso</li>
-                        <li><i class="fas fa-times"></i> Não é permitido danificar a infraestrutura do evento</li>
-                        <li><i class="fas fa-times"></i> Proibido distribuir materiais sem autorização</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Logística e Infraestrutura -->
-<section class="secao-logistica py-5">
-    <div class="container">
-        <h2 class="titulo-secao text-center mb-5">Logística e Infraestrutura</h2>
-        
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6">
-                <div class="card-infraestrutura">
-                    <div class="infra-icone">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <h5>Energia Elétrica</h5>
-                    <p>Fornecimento de energia 220V com tomadas de segurança em cada stand</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="card-infraestrutura">
-                    <div class="infra-icone">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <h5>Internet de Alta Velocidade</h5>
-                    <p>Conexão WiFi e cabo de ethernet de fibra óptica disponível</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="card-infraestrutura">
-                    <div class="infra-icone">
-                        <i class="fas fa-chair"></i>
-                    </div>
-                    <h5>Mobiliário</h5>
-                    <p>Mesas, cadeiras, suportes e vitrines conforme necessário</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="card-infraestrutura">
-                    <div class="infra-icone">
-                        <i class="fas fa-qrcode"></i>
-                    </div>
-                    <h5>Códigos QR</h5>
-                    <p>QR Codes para fichas, programas e materiais digitais</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row g-4 mt-4">
-            <div class="col-lg-6">
-                <div class="card-info-logistica">
-                    <h4><i class="fas fa-info-circle"></i> Informações Adicionais</h4>
+                
+                <div class="card-info-inscricao mb-4">
+                    <h4><i class="fas fa-file-contract me-3 text-primary"></i>Documentos e Dados Obrigatórios</h4>
+                    <p>Será necessário fornecer os seguintes dados e manifestação de interesse:</p>
                     <ul>
-                        <li>Estacionamento gratuito para expositores</li>
-                        <li>Catering disponível (mediante contato prévio)</li>
-                        <li>Segurança 24h durante e após o evento</li>
-                        <li>Cobertura mediática e fotografia profissional</li>
+                        <li><strong>Identificação Fiscal ou Pessoal</strong> (NIF ou B.I./Passaporte).</li>
+                        <li><strong>Dados de Contacto</strong> (Email e Telefone).</li>
+                        <li><strong>Manifestação de Interesse Detalhada</strong> (Motivação para participar).</li>
+                        <li><strong>Descrição do Projeto/Produto</strong> a ser apresentado no evento.</li>
                     </ul>
                 </div>
-            </div>
+                
+                <div class="text-center mt-5">
+                    <a href="#formulario-expositor" class="btn-principal btn-lg">Preencher Formulário de Inscrição</a>
+                </div>
 
-            <div class="col-lg-6">
-                <div class="card-info-logistica">
-                    <h4><i class="fas fa-headset"></i> Suporte Técnico</h4>
-                    <ul>
-                        <li>Equipa de suporte técnico disponível 24/7</li>
-                        <li>Troubleshooting de internet e energia</li>
-                        <li>Assistência na montagem do stand</li>
-                        <li>Contacto: +244 272 XXX XXX</li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Documentação Necessária -->
-<section class="secao-documentacao py-5 bg-light">
-    <div class="container">
-        <h2 class="titulo-secao text-center mb-5">Documentação Necessária</h2>
-        
-        <div class="row g-4">
-            <div class="col-lg-8 mx-auto">
-                <div class="card-documentacao">
-                    <h4><i class="fas fa-file-alt"></i> Documentos Obrigatórios</h4>
-                    <p>Todos os expositores devem fornecer os seguintes documentos no momento da inscrição:</p>
-                    
-                    <div class="checklist-docs">
-                        <div class="doc-item">
-                            <input type="checkbox" disabled>
-                            <label>Documento de Identidade (BI/Passaporte) do responsável</label>
-                        </div>
-                        <div class="doc-item">
-                            <input type="checkbox" disabled>
-                            <label>NIF (Número de Identificação Fiscal)</label>
-                        </div>
-                        <div class="doc-item">
-                            <input type="checkbox" disabled>
-                            <label>Certificado de Regularidade (se pessoa coletiva)</label>
-                        </div>
-                        <div class="doc-item">
-                            <input type="checkbox" disabled>
-                            <label>Descrição detalhada do produto/serviço a expor</label>
-                        </div>
-                        <div class="doc-item">
-                            <input type="checkbox" disabled>
-                            <label>Carta de apresentação e conformidade</label>
-                        </div>
-                        <div class="doc-item">
-                            <input type="checkbox" disabled>
-                            <label>Autorizações necessárias (se aplicável)</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Perguntas Frequentes -->
-<section class="secao-faq py-5">
+<section class="secao-faq py-5 bg-light">
     <div class="container">
         <h2 class="titulo-secao text-center mb-5">Perguntas Frequentes</h2>
         
-        <div class="row g-4">
+        <div class="row">
             <div class="col-lg-8 mx-auto">
                 <div class="accordion" id="accordionFAQ">
+                    
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                Quanto custa a inscrição?
+                                Quem pode ser um expositor?
                             </button>
                         </h2>
                         <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
                             <div class="accordion-body">
-                                A inscrição para visitantes é <strong>gratuita</strong>. Para expositores, existe uma taxa que varia conforme o tipo de expositor e tamanho do stand. Consulte o portal para detalhes.
+                                Qualquer empresa ou indivíduo (pessoa singular) que possua um projeto inovador ou tecnológico relevante para a transformação digital e que manifeste interesse em apresentá-lo.
                             </div>
                         </div>
                     </div>
@@ -238,38 +73,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                Posso alterar minha inscrição após submissão?
+                                Há custos para a inscrição ou exposição?
                             </button>
                         </h2>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                             <div class="accordion-body">
-                                Sim, as inscrições podem ser alteradas até <strong>5 dias antes do evento</strong>. Contacte conosco através do portal ou por email.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                O evento será transmitido online?
-                            </button>
-                        </h2>
-                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
-                                Sim! Haverá livestream de todas as palestras principais. Participantes remotos receberão link de acesso por email.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                Há limite de visitantes por dia?
-                            </button>
-                        </h2>
-                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
-                                Não, não há limite para visitantes. Porém, para garantir melhor organização, solicitamos inscrição prévia.
+                                Por favor, contacte a organização após a submissão do formulário para detalhes específicos sobre patrocínios e custos associados à ocupação de espaço de exposição. A inscrição de interesse é gratuita.
                             </div>
                         </div>
                     </div>
@@ -282,15 +91,92 @@
                         </h2>
                         <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                             <div class="accordion-body">
-                                Pode contactar através de: Email: <strong>contacto@expodigital.ao</strong> | Telefone: <strong>+244 272 XXX XXX</strong>
+                                Pode contactar através de: Email: <strong>geral@benguela.gov.ao</strong> | Telefone: <strong>+244 973 205 799</strong>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<section id="formulario-expositor" class="secao-formulario py-5">
+    <div class="container">
+        <h2 class="titulo-secao text-center mb-5">Formulário de Candidatura a Expositor</h2>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                
+                @if(session('sucesso'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session('sucesso') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                @endif
 
+                <form action="{{ route('inscricoes.expositor.armazenar') }}" method="POST" class="formulario-contacto p-4 border rounded shadow-sm">
+                    @csrf
+                    
+                    <h5 class="mb-3 text-primary">Informações do Candidato</h5>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nome Completo / Nome da Empresa</label>
+                        <input type="text" name="nome_completo" class="form-control @error('nome_completo') is-invalid @enderror" value="{{ old('nome_completo') }}" required>
+                        @error('nome_completo')<span class="invalid-feedback">{{ $message }}</span>@enderror
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">NIF / B.I. (Documento de Identificação)</label>
+                            <input type="text" name="nif_bi" class="form-control @error('nif_bi') is-invalid @enderror" value="{{ old('nif_bi') }}" required>
+                            @error('nif_bi')<span class="invalid-feedback">{{ $message }}</span>@enderror
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Tipo de Entidade</label>
+                            <select name="tipo_entidade" class="form-select @error('tipo_entidade') is-invalid @enderror" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="singular" {{ old('tipo_entidade') === 'singular' ? 'selected' : '' }}>Pessoa Singular (Indivíduo)</option>
+                                <option value="coletiva" {{ old('tipo_entidade') === 'coletiva' ? 'selected' : '' }}>Pessoa Coletiva (Empresa)</option>
+                            </select>
+                            @error('tipo_entidade')<span class="invalid-feedback">{{ $message }}</span>@enderror
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" required>
+                            @error('email')<span class="invalid-feedback">{{ $message }}</span>@enderror
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Telefone (Opcional)</label>
+                            <input type="tel" name="telefone" class="form-control @error('telefone') is-invalid @enderror" value="{{ old('telefone') }}">
+                            @error('telefone')<span class="invalid-feedback">{{ $message }}</span>@enderror
+                        </div>
+                    </div>
+                    
+                    <h5 class="mb-3 mt-4 text-primary">Detalhes da Proposta</h5>
+
+                    <div class="mb-3">
+                        <label class="form-label">Manifestação de Interesse (Por que deseja expor?)</label>
+                        <textarea name="manifestacao_interesse" rows="4" class="form-control @error('manifestacao_interesse') is-invalid @enderror" required>{{ old('manifestacao_interesse') }}</textarea>
+                        @error('manifestacao_interesse')<span class="invalid-feedback">{{ $message }}</span>@enderror
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Projeto ou Solução Tecnológica a Apresentar</label>
+                        <textarea name="projeto_apresentar" rows="4" class="form-control @error('projeto_apresentar') is-invalid @enderror" required>{{ old('projeto_apresentar') }}</textarea>
+                        @error('projeto_apresentar')<span class="invalid-feedback">{{ $message }}</span>@enderror
+                    </div>
+
+                    <button type="submit" class="btn-principal btn-lg w-100">
+                        <i class="fas fa-paper-plane"></i> Enviar Candidatura
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

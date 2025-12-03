@@ -7,9 +7,6 @@
 <section class="hero-section" style="background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('/images/banner-principal.jpg') center / cover; background-attachment: fixed;">
     <div class="hero-overlay">
         <div class="hero-content">
-            <div class="hero-logo-section">
-                <img src="/images/logo-expo-blue.png" alt="Expo Digital 2025" class="hero-logo">
-            </div>
             
             <h1 class="hero-titulo">Programa e Temas</h1>
             <p class="hero-descricao">Descobrindo o Futuro Digital em Três Dias Transformadores</p>

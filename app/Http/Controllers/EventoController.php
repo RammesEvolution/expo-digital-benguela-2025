@@ -7,10 +7,34 @@ use Illuminate\Http\Request;
 
 class EventoController extends Controller
 {
-    public function indice()
+    public function indice(Request $request)
     {
-        $eventos = Evento::orderBy('data_inicio', 'desc')->paginate(12);
-        return view('eventos.indice', compact('eventos'));
+        $estadoFiltro = $request->input('estado_filtro');
+        $query = Evento::orderBy('data_inicio', 'desc');
+        $today = Carbon::now();
+
+        if ($estadoFiltro) {
+            
+            if ($estadoFiltro === 'realizado') {
+                // Lógica de Evento Realizado (Confirmado E já terminou)
+                $query->where('estado', 'confirmado')
+                      ->where('data_fim', '<', $today);
+
+            } elseif ($estadoFiltro === 'proximo') {
+                // Lógica de Evento Próximo (Futuro ou A Decorrer)
+                $query->where('data_fim', '>=', $today)
+                      ->where('estado', 'confirmado'); // Apenas futuros confirmados
+
+            } elseif (in_array($estadoFiltro, ['planejado', 'confirmado', 'cancelado'])) {
+                // Filtros diretos da base de dados (Planejado, Confirmado, Cancelado)
+                $query->where('estado', $estadoFiltro);
+            }
+        }
+        
+        $eventos = $query->paginate(12);
+        
+        // Passa o filtro atual para a view para manter a seleção no dropdown
+        return view('eventos.indice', compact('eventos', 'estadoFiltro'));
     }
 
     public function criar()

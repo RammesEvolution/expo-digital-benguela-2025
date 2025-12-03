@@ -8,7 +8,6 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\OrganizadorController;
 use App\Http\Controllers\ExpositorController;
 use App\Http\Controllers\VisitanteController;
-use App\Http\Controllers\ParceirosController;
 use App\Http\Controllers\ProgramaController;
 use App\Http\Controllers\InscricoesController;
 use App\Http\Controllers\DashboardController; 
@@ -18,7 +17,7 @@ use App\Http\Controllers\AuthController;
 |--------------------------------------------------------------------------
 | Rotas Públicas (Acessíveis a Todos)
 |--------------------------------------------------------------------------
-*/
+*/ 
 // Rotas visíveis a todos
 Route::get('/login', [AuthController::class, 'mostrarLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -57,9 +56,9 @@ Route::get('/sobre', function () {
 })->name('sobre');
 Route::get('/programa', [ProgramaController::class, 'index'])->name('programa');
 Route::get('/inscricoes', [InscricoesController::class, 'index'])->name('inscricoes');
-Route::get('/organizador', [OrganizadorController::class, 'indice'])->name('organizador.indice');
-Route::get('/expositor', [ExpositorController::class, 'indice'])->name('expositor.indice');
-Route::get('/visitante', [VisitanteController::class, 'indice'])->name('visitante.indice');
+// Rota para Submissão do Formulário de Expositor
+Route::post('/inscricoes/expositor', [ExpositorController::class, 'armazenarInscricao'])->name('inscricoes.expositor.armazenar');
+
 Route::prefix('contacto')->group(function () {
     Route::get('/', [ContactoController::class, 'indice'])->name('contacto.indice');
     Route::post('/', [ContactoController::class, 'armazenar'])->name('contacto.armazenar');
@@ -102,23 +101,20 @@ Route::middleware(['auth', 'admin'])->group(function () {
         Route::delete('/{id}', [EventoController::class, 'eliminar'])->name('eventos.eliminar');
     });
 
-    // 4. CRUD de Parceiros
-    Route::prefix('parceiros')->group(function () {
-     
-        Route::get('/criar', [ParceirosController::class, 'criar'])->name('parceiros.criar');
-        Route::get('/', [ParceirosController::class, 'indice'])->name('parceiros.indice');
-
-        Route::get('/{id}/editar', [ParceirosController::class, 'editar'])->name('parceiros.editar');
-        Route::put('/{id}', [ParceirosController::class, 'atualizar'])->name('parceiros.atualizar');
-        Route::delete('/{id}', [ParceirosController::class, 'eliminar'])->name('parceiros.eliminar');
-        
-        Route::get('/{id}', [ParceirosController::class, 'mostrar'])->name('parceiros.mostrar');
-        Route::post('/', [ParceirosController::class, 'armazenar'])->name('parceiros.armazenar');
-    });
+    
 
     // 5. Gestão de Mensagens (Acessível só ao Admin)
     Route::prefix('contacto')->group(function () {
         Route::get('/mensagens', [ContactoController::class, 'listarMensagens'])->name('contacto.mensagens');
         Route::delete('/{id}', [ContactoController::class, 'eliminarMensagem'])->name('contacto.eliminar');
+    });
+
+    Route::prefix('expositores')->group(function () {
+        Route::get('/', [ExpositorController::class, 'indiceAdmin'])->name('admin.expositores.indice');
+        Route::get('/{id}', [ExpositorController::class, 'mostrar'])->name('admin.expositores.mostrar');
+        // Rota para mudar o status (Aprovar/Rejeitar)
+        Route::put('/{id}/status', [ExpositorController::class, 'atualizarStatus'])->name('admin.expositores.atualizarStatus');
+        // Se precisar de eliminar, adicione:
+        // Route::delete('/{id}', [ExpositorController::class, 'eliminar'])->name('admin.expositores.eliminar');
     });
 });

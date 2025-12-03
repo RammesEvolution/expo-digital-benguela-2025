@@ -27,7 +27,15 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-admin shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-color-primary"><i class="fas fa-user-check"></i> Inscrições Expositores</h5>
+                        <p class="card-text">Gerir inscrições para exposição.</p>
+                        <a href="{{ route('admin.expositores.indice') }}" class="btn text-white bg-color-primary">Ver Candidaturas</a>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-4 col-md-6">
                 <div class="card card-admin shadow h-100">
                     <div class="card-body">
@@ -38,15 +46,6 @@
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6">
-                <div class="card card-admin shadow h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-color-primary"><i class="fas fa-handshake"></i> Parceiros</h5>
-                        <p class="card-text">Gerir os logos e informações das entidades parceiras.</p>
-                        <a href="{{ route('parceiros.indice') }}" class="btn text-white bg-color-primary">Gerir Parceiros</a>
-                    </div>
-                </div>
-            </div>
             
             <div class="col-lg-4 col-md-6">
                 <div class="card card-admin shadow h-100">

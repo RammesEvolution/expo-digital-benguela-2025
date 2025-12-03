@@ -132,13 +132,13 @@
             </div>
 
             <div class="col-lg-3 col-md-6">
-                <div class="card-titular placeholder">
+                <div class="card-titular">
                     <div class="img-placeholder-titular">
-                        <i class="fas fa-plus"></i>
+                        <img src="{{ asset('images/titulares/Job-Squeseque .jpg') }}" alt="Joaquim Victor Sambo" class="img-titular">
                     </div>
                     <div class="titular-info">
-                        <h5 class="titular-cargo text-color-primary">Cargo a Definir</h5>
-                        <h4 class="titular-nome">Em Breve</h4>
+                        <h5 class="titular-cargo text-color-primary">Chefe de Departamento de Comunicação Imprensa</h5>
+                        <h4 class="titular-nome">Job Squeseque</h4>
                         <p class="titular-secao">Governo Provincial de Benguela</p>
                     </div>
                 </div>
@@ -193,36 +193,7 @@
     </div>
 </section>
 
-<!-- Eventos Destaque -->
-<section class="secao-eventos py-5 bg-light">
-    <div class="container">
-        <h2 class="titulo-secao text-center mb-5">Próximos Eventos</h2>
-        <div class="row g-4">
-            @forelse($eventosDestaque as $evento)
-                <div class="col-md-4">
-                    <div class="card-evento">
-                        <div class="evento-data">
-                            <span class="data">{{ $evento->data_inicio->format('d') }}</span>
-                            <span class="mes">{{ $evento->data_inicio->format('M') }}</span>
-                        </div>
-                        <div class="evento-info">
-                            <h5>{{ $evento->titulo }}</h5>
-                            <small class="localizacao"><i class="fas fa-map-pin"></i> {{ $evento->localizacao }}</small>
-                        </div>
-                        <a href="{{ route('agenda.mostrar', $evento->id) }}" class="btn-pequeno">Ver Mais</a>
-                    </div>
-                </div>
-            @empty
-                <div class="col-12 text-center">
-                    <p class="text-muted">Nenhum evento confirmado no momento</p>
-                </div>
-            @endforelse
-        </div>
-        <div class="text-center mt-4">
-            <a href="{{ route('agenda.indice') }}" class="btn-principal">Ver Agenda Completa</a>
-        </div>
-    </div>
-</section>
+
 
 <!-- Partners Section with Horizontal Scroll -->
 <section class="secao-parceiros py-5">
@@ -230,24 +201,114 @@
         <h2 class="titulo-secao text-center mb-5">Nossos Parceiros</h2>
         <div class="parceiros-scroll-container">
             <div class="parceiros-scroll-wrapper">
-                @forelse($parceiros as $parceiro)
+                <div class="parceiros-scroll-wrapper">
                     <div class="parceiro-card-item">
                         <div class="card-parceiro">
-                            @if($parceiro->url_site)
-                                <a href="{{ $parceiro->url_site }}" target="_blank" title="{{ $parceiro->nome }}">
-                                    <img src="{{ asset('storage/' . $parceiro->caminho_logo) }}" alt="{{ $parceiro->nome }}" class="logo-parceiro">
-                                </a>
-                            @else
-                                <img src="{{ asset('storage/' . $parceiro->caminho_logo) }}" alt="{{ $parceiro->nome }}" class="logo-parceiro">
-                            @endif
+                            <img src="{{ asset('images/parceiros/unitel.png') }}" alt="Unite" class="logo-parceiro">
                         </div>
-                        <p class="parceiro-nome text-center mt-2">{{ $parceiro->nome }}</p>
+                        <p class="parceiro-nome text-center mt-2">Unitel</p>
                     </div>
-                @empty
-                    <div class="col-12 text-center">
-                        <p class="text-muted">Parceiros em breve...</p>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/africell.png') }}" alt="Africell" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">Africell</p>
                     </div>
-                @endforelse
+                    
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/telecom.png') }}" alt="Angola Telecom" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">Angola Telecom</p>
+                    </div>
+                    
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/paratus.png') }}" alt="ITA Paratus" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">ITA Paratus</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/movicel.png') }}" alt="Movicel" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">Movicel</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/inapem.png') }}" alt="Inapem" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">Inapem</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/serjob.png') }}" alt="SerJob" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">SerJob</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/mes.png') }}" alt="Rammes Evolution" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">Rammes Evolution</p>
+                    </div>
+                
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/mind-creative.png') }}" alt="Mind Creative" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">Mind Creative</p>
+                    </div>
+                    
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/kiraSoft.png') }}" alt="KiraSoft" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">KiraSoft</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/mtech-soluctions.png') }}" alt="MTech Soluctions" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">MTech Solutions</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/grupoaa.png') }}" alt="GrupoAA" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">GrupoAA</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/tombosy.png') }}" alt="Tombosy" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">Tombosy</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/record-digital-angola.png') }}" alt="Record Digital Angola" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">Record Digital Angola</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/jean piaget.png') }}" alt="ISP Jean Piaget" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">ISP Jean Piaget</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/ispb.png') }}" alt="ISP de Benguela" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">ISP de Benguela</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/hcb.jpg') }}" alt="Grupo HCB" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">Grupo HCB</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -262,21 +323,21 @@
                 <div class="card-contacto">
                     <i class="fas fa-envelope"></i>
                     <h5>Email</h5>
-                    <a href="mailto:contacto@expodigital.ao">contacto@expodigital.ao</a>
+                    <a href="mailto:geral@benguela.gov.ao">geral@benguela.gov.ao</a>
                 </div>
             </div>
             <div class="col-md-4 text-center">
                 <div class="card-contacto">
                     <i class="fas fa-phone"></i>
                     <h5>Telefone</h5>
-                    <a href="tel:+244272000000">+244 272 XXX XXX</a>
+                    <a href="tel:+244973205799">+244 973 205 799</a>
                 </div>
             </div>
             <div class="col-md-4 text-center">
                 <div class="card-contacto">
                     <i class="fas fa-map-marker-alt"></i>
-                    <h5>Localização</h5>
-                    <p>Benguela, Angola</p>
+                    <h5>Endereço</h5>
+                    <p>Rua de Timor, Benguela</p>
                 </div>
             </div>
         </div>

@@ -21,8 +21,7 @@ class ContactoController extends Controller
             'telefone' => 'nullable|string|max:20',
             'assunto' => 'required|string|max:255',
             'mensagem' => 'required|string|min:10',
-            'tipo_utilizador' => 'required|in:visitante,expositor,organizador',
-        ]);
+            ]);
 
         SubmissaoContacto::create($validado);
 

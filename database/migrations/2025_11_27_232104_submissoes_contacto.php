@@ -15,7 +15,6 @@ return new class extends Migration
             $table->string('telefone')->nullable();
             $table->string('assunto')->nullable();
             $table->longText('mensagem');
-            $table->enum('tipo_utilizador', ['visitante', 'expositor', 'organizador'])->default('visitante');
             $table->enum('estado', ['novo', 'respondido', 'fechado'])->default('novo');
             $table->timestamps();
             $table->index('estado');

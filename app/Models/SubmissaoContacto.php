@@ -17,7 +17,6 @@ class SubmissaoContacto extends Model
         'telefone',
         'assunto',
         'mensagem',
-        'tipo_utilizador',
     ];
 
     protected $casts = [

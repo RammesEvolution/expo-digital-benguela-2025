@@ -4,11 +4,13 @@
 
 @section('conteudo')
 <!-- Hero Section for Sobre with parallax -->
-<section class="hero-section-sobre" style="background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.6)), url('/images/banner-sobre.jpg') center / cover; background-attachment: fixed; min-height: 400px; display: flex; align-items: center;">
-    <div class="container w-100">
-        <div class="hero-content text-white">
-            <h1 class="hero-titulo-page">Sobre a Expo Digital 2025</h1>
-            <p class="hero-subtitulo-page">Transformando Benguela Através da Inovação e Tecnologia</p>
+ <section class="hero-section" style="background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('/images/banner-principal.jpg') center / cover; background-attachment: fixed;">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            
+            
+            <h1 class="hero-titulo">Sobre a Expo Digital 2025 </h1>
+            <p class="hero-descricao">Transformando Benguela Através da Inovação e Tecnologia</p>
         </div>
     </div>
 </section>
@@ -166,15 +168,4 @@
     </div>
 </section>
 
-<!-- CTA Para Inscrição -->
-<section class="secao-cta-sobre py-5 bg-primary text-white">
-    <div class="container text-center">
-        <h2 class="mb-3">Faça Parte da Transformação Digital!</h2>
-        <p class="texto-grande mb-4">Inscreva-se agora na Expo Digital 2025 e prepare-se para o futuro.</p>
-        <div>
-            <a href="{{ route('inscricoes') }}" class="btn btn-light btn-lg me-3">Inscrições</a>
-            <a href="{{ route('programa') }}" class="btn btn-outline-light btn-lg">Ver Programa</a>
-        </div>
-    </div>
-</section>
 @endsection

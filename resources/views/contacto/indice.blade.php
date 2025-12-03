@@ -30,14 +30,7 @@
                         <input type="tel" name="telefone" class="form-control">
                     </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Tipo de Utilizador</label>
-                        <select name="tipo_utilizador" class="form-control">
-                            <option value="visitante">Visitante</option>
-                            <option value="expositor">Expositor</option>
-                            <option value="organizador">Organizador</option>
-                        </select>
-                    </div>
+                  
 
                     <div class="mb-3">
                         <label class="form-label">Assunto</label>
@@ -60,47 +53,42 @@
             </div>
 
             <!-- Informações de Contacto -->
-            <div class="col-lg-6">
-                <h3 class="titulo-subsecao mb-4">Contacte-nos Diretamente</h3>
+            <div class="col-lg-6 d-flex flex-column justify-content-start">
+
+                <div class="card-simples-contacto mb-4 p-4 border rounded">
+                    <h5 class="titulo-simples-contacto mb-2">Endereço</h5>
+                    <p class="mb-0">Rua de Timor</p>
+                </div>
+
+                <div class="card-simples-contacto p-4 border rounded">
+                    <h5 class="titulo-simples-contacto mb-3">Info:</h5>
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="text-muted">Tel:</span>
+                        <a href="tel:+244973205799">+244 973 205 799</a>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted">Email:</span>
+                        <a href="mailto:geral@benguela.gov.ao">geral@benguela.gov.ao</a>
+                    </div>
+                </div>
                 
-                <div class="card-info-contacto mb-4">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h5>Email</h5>
-                        <a href="mailto:contacto@expodigital.ao">contacto@expodigital.ao</a>
-                    </div>
-                </div>
-
-                <div class="card-info-contacto mb-4">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h5>Telefone</h5>
-                        <a href="tel:+244272000000">+244 272 XXX XXX</a>
-                    </div>
-                </div>
-
-                <div class="card-info-contacto mb-4">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h5>Localização</h5>
-                        <p>Benguela, Angola<br>Governo Provincial de Benguela</p>
-                    </div>
-                </div>
-
-                <div class="card-info-contacto">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h5>Horário de Atendimento</h5>
-                        <p>Segunda a Sexta: 09:00 - 17:00<br>Sábado: 10:00 - 14:00</p>
-                    </div>
-                </div>
+                <div class="d-none d-lg-block" style="flex-grow: 1;"></div> 
             </div>
         </div>
 
         <!-- Mapa -->
         <div class="mapa-container mt-5">
             <h3 class="titulo-subsecao mb-4">Localização</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.1234567890!2d13.8344!3d-12.3745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2s0x0!5e0!3m2!1spt!2sao!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31150.71247033301!2d13.394400230133051!3d-12.592856515817207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1bafd198c2bfffff%3A0xd48e46772f0c3196!2sGoverno%20Provincial%20de%20Benguela!5e0!3m2!1spt-PT!2sao!4v1764698080207!5m2!1spt-PT!2sao" 
+                width="100%"   height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </div>
 </section>
