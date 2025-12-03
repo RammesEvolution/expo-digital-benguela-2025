@@ -292,6 +292,12 @@
                     </div>
                     <div class="parceiro-card-item">
                         <div class="card-parceiro">
+                            <img src="{{ asset('images/parceiros/buaio-kumbu.png') }}" alt="Buaio Kumbu" class="logo-parceiro">
+                        </div>
+                        <p class="parceiro-nome text-center mt-2">Buaio Kumbu</p>
+                    </div>
+                    <div class="parceiro-card-item">
+                        <div class="card-parceiro">
                             <img src="{{ asset('images/parceiros/jean piaget.png') }}" alt="ISP Jean Piaget" class="logo-parceiro">
                         </div>
                         <p class="parceiro-nome text-center mt-2">ISP Jean Piaget</p>

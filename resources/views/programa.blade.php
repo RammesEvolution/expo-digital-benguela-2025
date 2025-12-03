@@ -47,7 +47,7 @@
             <div class="col-lg-4">
                 <div class="card-dia-programa">
                     <div class="dia-numero">
-                        <span>DIA 1</span>
+                       
                     </div>
                     <h3 class="dia-titulo">Administração Pública Digital</h3>
                     <p class="dia-tema"><strong>Tema:</strong> <em>Informatizar para Acelerar Benguela</em></p>
@@ -76,7 +76,7 @@
             <div class="col-lg-4">
                 <div class="card-dia-programa card-dia-destaque">
                     <div class="dia-numero dia-numero-destaque">
-                        <span>DIA 2</span>
+                        
                     </div>
                     <h3 class="dia-titulo">Comunicação Social e Futuro Digital</h3>
                     <p class="dia-tema"><strong>Tema:</strong> <em>Inteligência Artificial na Comunicação</em></p>
@@ -105,7 +105,7 @@
             <div class="col-lg-4">
                 <div class="card-dia-programa">
                     <div class="dia-numero">
-                        <span>DIA 3</span>
+                        
                     </div>
                     <h3 class="dia-titulo">Novo Perfil do Profissional</h3>
                     <p class="dia-tema"><strong>Tema:</strong> <em>Do Repórter ao Gestor de Comunidades Digitais</em></p>
