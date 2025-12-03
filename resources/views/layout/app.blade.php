@@ -177,7 +177,11 @@
             </div>
             <hr class="divider-footer">
             <div class="text-center py-3">
-                <p class="copyright">&copy; 2025 Governo Provincial de Benguela. Todos os direitos reservados.</p>
+                <p class="copyright">
+                    &copy; 2025 Governo Provincial de Benguela. Todos os direitos reservados.
+                    <br>
+                    Desenvolvido por: <a href="#" target="_blank" style="color: #ffffff; text-decoration: underline;">Rammes Evolution</a>
+                </p>
             </div>
         </div>
     </footer>

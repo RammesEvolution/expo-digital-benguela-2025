@@ -166,7 +166,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label">Projeto ou Solução Tecnológica a Apresentar</label>
+                        <label class="form-label">Projecto ou Solução Tecnológica a Apresentar</label>
                         <textarea name="projeto_apresentar" rows="4" class="form-control @error('projeto_apresentar') is-invalid @enderror" required>{{ old('projeto_apresentar') }}</textarea>
                         @error('projeto_apresentar')<span class="invalid-feedback">{{ $message }}</span>@enderror
                     </div>
