@@ -61,11 +61,7 @@
                             <li>Inclusão digital e acesso a serviços públicos online</li>
                         </ul>
 
-                        <h5 class="subtitulo-dia mt-3">Preletores:</h5>
-                        <ul class="lista-preletores">
-                            <li><i class="fas fa-user-tie"></i> Joaquim Cassicato</li>
-                            <li><i class="fas fa-user-tie"></i> Ramildo Vicola</li>
-                        </ul>
+                        
                     </div>
                     
                     <a href="{{ route('inscricoes') }}" class="btn-dia">Inscreva-se</a>
@@ -90,11 +86,6 @@
                             <li>Storytelling no mundo digital</li>
                         </ul>
 
-                        <h5 class="subtitulo-dia mt-3">Preletores:</h5>
-                        <ul class="lista-preletores">
-                            <li><i class="fas fa-user-tie"></i> Especialistas em IA</li>
-                            <li><i class="fas fa-user-tie"></i> Comunicadores Digitais</li>
-                        </ul>
                     </div>
                     
                     <a href="{{ route('inscricoes') }}" class="btn-dia btn-dia-destaque">Inscreva-se</a>
@@ -119,10 +110,7 @@
                             <li>Edição de conteúdo para redes sociais</li>
                         </ul>
 
-                        <h5 class="subtitulo-dia mt-3">Preletor:</h5>
-                        <ul class="lista-preletores">
-                            <li><i class="fas fa-user-tie"></i> António Emílio</li>
-                        </ul>
+                       
                     </div>
                     
                     <a href="{{ route('inscricoes') }}" class="btn-dia">Inscreva-se</a>
